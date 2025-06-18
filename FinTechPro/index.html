@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinTechPro - Revolutionary Financial Technology Solutions</title>
+    <meta name="description" content="Transform your financial operations with FinTechPro's cutting-edge technology, AI-powered analytics, and seamless user experiences.">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-chart-line"></i>
+                <span>FinTechPro</span>
+            </div>
+            
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="solutions.html" class="nav-link">Solutions</a>
+                <a href="partners.html" class="nav-link">Partners</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+            
+            <div class="nav-actions">
+                <button class="btn btn-outline" onclick="openModal('loginModal')">
+                    <i class="fas fa-sign-in-alt"></i> Login
+                </button>
+                <button class="btn btn-primary" onclick="openModal('signupModal')">
+                    <i class="fas fa-user-plus"></i> Sign Up
+                </button>
+                <button class="btn btn-secondary" onclick="openModal('joinModal')">
+                    <i class="fas fa-handshake"></i> Join Us
+                </button>
+            </div>
+            
+            <div class="nav-toggle" id="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="typing-text">Revolutionary</span><br>
+                    <span class="typing-text delay-1">FinTech Solutions</span>
+                </h1>
+                <p class="hero-description">
+                    Transforming financial services with cutting-edge technology, AI-powered analytics, and seamless user experiences.
+                </p>
+                <div class="hero-actions">
+                    <button class="btn btn-secondary btn-large">
+                        <i class="fas fa-rocket"></i> Get Started
+                    </button>
+                    <button class="btn btn-outline-white btn-large">
+                        <i class="fas fa-play"></i> Watch Demo
+                    </button>
+                </div>
+                
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-value">500+</div>
+                        <div class="stat-label">Clients Served</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">$50M+</div>
+                        <div class="stat-label">Transactions Processed</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">99.9%</div>
+                        <div class="stat-label">Uptime Guarantee</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" 
+                     alt="FinTech professionals collaborating on financial solutions" 
+                     class="floating">
+                
+                <!-- Floating cards -->
+                <div class="floating-card card-1">
+                    <div class="card-icon">📈</div>
+                    <div class="card-title">Revenue Growth</div>
+                    <div class="card-value">+127%</div>
+                </div>
+                
+                <div class="floating-card card-2">
+                    <div class="card-icon">🛡️</div>
+                    <div class="card-title">Security Rating</div>
+                    <div class="card-value">AAA+</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>About FinTechPro</h2>
+                <p>We are pioneers in financial technology, delivering innovative solutions that empower businesses to thrive in the digital economy.</p>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Leading the Future of Finance</h3>
+                    <p>With over a decade of experience in financial technology, we've built solutions that power the world's most innovative companies.</p>
+                    
+                    <div class="feature-list">
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>AI-Powered Financial Analytics</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Enterprise-Grade Security</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>24/7 Global Support</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Regulatory Compliance</span>
+                        </div>
+                    </div>
+                    
+                    <button class="btn btn-primary">
+                        <i class="fas fa-info-circle"></i> Learn More
+                    </button>
+                </div>
+                
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" 
+                         alt="Modern office environment with advanced technology">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solutions Section -->
+    <section class="solutions" id="solutions">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Solutions</h2>
+                <p>Comprehensive financial technology solutions designed to accelerate your business growth and enhance customer experiences.</p>
+            </div>
+            
+            <div class="solutions-grid">
+                <div class="solution-card">
+                    <div class="solution-icon primary">💳</div>
+                    <h3>Payment Processing</h3>
+                    <p>Secure, fast, and reliable payment processing solutions for businesses of all sizes.</p>
+                    <ul class="solution-features">
+                        <li><i class="fas fa-check"></i> Multi-currency support</li>
+                        <li><i class="fas fa-check"></i> Real-time fraud detection</li>
+                        <li><i class="fas fa-check"></i> PCI DSS compliant</li>
+                    </ul>
+                    <button class="btn btn-ghost">
+                        Learn More <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+                
+                <div class="solution-card">
+                    <div class="solution-icon secondary">📊</div>
+                    <h3>Analytics Dashboard</h3>
+                    <p>Advanced analytics and reporting tools to make data-driven financial decisions.</p>
+                    <ul class="solution-features">
+                        <li><i class="fas fa-check"></i> Real-time insights</li>
+                        <li><i class="fas fa-check"></i> Custom reporting</li>
+                        <li><i class="fas fa-check"></i> Predictive analytics</li>
+                    </ul>
+                    <button class="btn btn-ghost">
+                        Learn More <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+                
+                <div class="solution-card">
+                    <div class="solution-icon accent">🛡️</div>
+                    <h3>Risk Management</h3>
+                    <p>Comprehensive risk assessment and management tools powered by machine learning.</p>
+                    <ul class="solution-features">
+                        <li><i class="fas fa-check"></i> AI-powered scoring</li>
+                        <li><i class="fas fa-check"></i> Automated compliance</li>
+                        <li><i class="fas fa-check"></i> 24/7 monitoring</li>
+                    </ul>
+                    <button class="btn btn-ghost">
+                        Learn More <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+                
+                <div class="solution-card">
+                    <div class="solution-icon purple">📱</div>
+                    <h3>Mobile Banking</h3>
+                    <p>Next-generation mobile banking solutions with biometric security and AI assistance.</p>
+                    <ul class="solution-features">
+                        <li><i class="fas fa-check"></i> Biometric authentication</li>
+                        <li><i class="fas fa-check"></i> Voice banking</li>
+                        <li><i class="fas fa-check"></i> Instant transfers</li>
+                    </ul>
+                    <button class="btn btn-ghost">
+                        Learn More <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+                
+                <div class="solution-card">
+                    <div class="solution-icon pink">💰</div>
+                    <h3>Digital Wallet</h3>
+                    <p>Secure digital wallet solutions supporting multiple cryptocurrencies and fiat currencies.</p>
+                    <ul class="solution-features">
+                        <li><i class="fas fa-check"></i> Multi-asset support</li>
+                        <li><i class="fas fa-check"></i> Cold storage security</li>
+                        <li><i class="fas fa-check"></i> DeFi integration</li>
+                    </ul>
+                    <button class="btn btn-ghost">
+                        Learn More <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+                
+                <div class="solution-card">
+                    <div class="solution-icon indigo">🤖</div>
+                    <h3>AI Assistant</h3>
+                    <p>Intelligent financial assistant powered by advanced AI for personalized banking experiences.</p>
+                    <ul class="solution-features">
+                        <li><i class="fas fa-check"></i> Natural language processing</li>
+                        <li><i class="fas fa-check"></i> Spending insights</li>
+                        <li><i class="fas fa-check"></i> Investment advice</li>
+                    </ul>
+                    <button class="btn btn-ghost">
+                        Learn More <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section class="partners" id="partners">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Partners</h2>
+                <p>We collaborate with industry leaders to deliver exceptional financial technology solutions worldwide.</p>
+            </div>
+            
+            <div class="partners-content">
+                <div class="partners-text">
+                    <h3>Strategic Partnerships</h3>
+                    <p>Our global network of partners enables us to deliver cutting-edge solutions and reach new markets worldwide.</p>
+                    
+                    <div class="partners-stats">
+                        <div class="stat-item">
+                            <div class="stat-value">150+</div>
+                            <div class="stat-label">Global Partners</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">50+</div>
+                            <div class="stat-label">Countries</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">99%</div>
+                            <div class="stat-label">Satisfaction Rate</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">24/7</div>
+                            <div class="stat-label">Support</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="partners-image">
+                    <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" 
+                         alt="Business partnership handshake representing collaboration">
+                </div>
+            </div>
+            
+            <div class="partner-logos">
+                <h4>Trusted by Industry Leaders</h4>
+                <div class="logos-grid">
+                    <div class="partner-logo">
+                        <div class="logo-icon">🏢</div>
+                        <div class="logo-name">Microsoft</div>
+                    </div>
+                    <div class="partner-logo">
+                        <div class="logo-icon">🔍</div>
+                        <div class="logo-name">Google</div>
+                    </div>
+                    <div class="partner-logo">
+                        <div class="logo-icon">📦</div>
+                        <div class="logo-name">Amazon</div>
+                    </div>
+                    <div class="partner-logo">
+                        <div class="logo-icon">🍎</div>
+                        <div class="logo-name">Apple</div>
+                    </div>
+                    <div class="partner-logo">
+                        <div class="logo-icon">💙</div>
+                        <div class="logo-name">PayPal</div>
+                    </div>
+                    <div class="partner-logo">
+                        <div class="logo-icon">💳</div>
+                        <div class="logo-name">Stripe</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get In Touch</h2>
+                <p>Ready to transform your financial operations? Let's discuss how our solutions can help your business grow.</p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" 
+                         alt="Financial data visualization and analytics dashboard">
+                    
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <div class="method-icon primary">📍</div>
+                            <div class="method-content">
+                                <div class="method-title">Headquarters</div>
+                                <div class="method-text">123 Financial District, New York, NY 10001</div>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="method-icon secondary">📞</div>
+                            <div class="method-content">
+                                <div class="method-title">Phone</div>
+                                <div class="method-text">+1 (555) 123-4567</div>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="method-icon accent">✉️</div>
+                            <div class="method-content">
+                                <div class="method-title">Email</div>
+                                <div class="method-text">contact@fintechpro.com</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form-container">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">First Name</label>
+                                <input type="text" id="firstName" name="firstName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name</label>
+                                <input type="text" id="lastName" name="lastName" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="company">Company</label>
+                            <input type="text" id="company" name="company">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="service">How can we help?</label>
+                            <select id="service" name="service">
+                                <option value="">Select a service</option>
+                                <option value="Payment Processing">Payment Processing</option>
+                                <option value="Analytics Dashboard">Analytics Dashboard</option>
+                                <option value="Risk Management">Risk Management</option>
+                                <option value="Mobile Banking">Mobile Banking</option>
+                                <option value="Digital Wallet">Digital Wallet</option>
+                                <option value="AI Assistant">AI Assistant</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Tell us about your project..." required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-full">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-chart-line"></i>
+                        <span>FinTechPro</span>
+                    </div>
+                    <p>Empowering businesses with cutting-edge financial technology solutions for the digital age.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Solutions</h4>
+                    <ul>
+                        <li><a href="#">Payment Processing</a></li>
+                        <li><a href="#">Analytics Dashboard</a></li>
+                        <li><a href="#">Risk Management</a></li>
+                        <li><a href="#">Mobile Banking</a></li>
+                        <li><a href="#">Digital Wallet</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">API Reference</a></li>
+                        <li><a href="#">Security</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2024 FinTechPro. All rights reserved. | Powered by advanced financial technology solutions.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modals -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Welcome Back</h2>
+                <span class="close" onclick="closeModal('loginModal')">&times;</span>
+            </div>
+            <form class="modal-form">
+                <div class="form-group">
+                    <label for="loginEmail">Email</label>
+                    <input type="email" id="loginEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Password</label>
+                    <input type="password" id="loginPassword" required>
+                </div>
+                <div class="form-options">
+                    <label class="checkbox-label">
+                        <input type="checkbox"> Remember me
+                    </label>
+                    <a href="#" class="forgot-password">Forgot password?</a>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full">Sign In</button>
+                <p class="modal-switch">Don't have an account? <a href="#" onclick="switchModal('loginModal', 'signupModal')">Sign up</a></p>
+            </form>
+        </div>
+    </div>
+
+    <div id="signupModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Create Account</h2>
+                <span class="close" onclick="closeModal('signupModal')">&times;</span>
+            </div>
+            <form class="modal-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="signupFirstName">First Name</label>
+                        <input type="text" id="signupFirstName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signupLastName">Last Name</label>
+                        <input type="text" id="signupLastName" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="signupEmail">Email</label>
+                    <input type="email" id="signupEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="signupPassword">Password</label>
+                    <input type="password" id="signupPassword" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" id="confirmPassword" required>
+                </div>
+                <div class="form-options">
+                    <label class="checkbox-label">
+                        <input type="checkbox" required> I agree to the Terms of Service and Privacy Policy
+                    </label>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full">Create Account</button>
+                <p class="modal-switch">Already have an account? <a href="#" onclick="switchModal('signupModal', 'loginModal')">Sign in</a></p>
+            </form>
+        </div>
+    </div>
+
+    <div id="joinModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Join Our Team</h2>
+                <span class="close" onclick="closeModal('joinModal')">&times;</span>
+            </div>
+            <form class="modal-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="joinFirstName">First Name</label>
+                        <input type="text" id="joinFirstName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="joinLastName">Last Name</label>
+                        <input type="text" id="joinLastName" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="joinEmail">Email</label>
+                    <input type="email" id="joinEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="position">Position of Interest</label>
+                    <select id="position" required>
+                        <option value="">Select a position</option>
+                        <option value="Software Engineer">Software Engineer</option>
+                        <option value="Product Manager">Product Manager</option>
+                        <option value="Data Scientist">Data Scientist</option>
+                        <option value="UX/UI Designer">UX/UI Designer</option>
+                        <option value="Sales Executive">Sales Executive</option>
+                        <option value="Marketing Specialist">Marketing Specialist</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="experience">Years of Experience</label>
+                    <select id="experience" required>
+                        <option value="">Select experience level</option>
+                        <option value="0-1 years">0-1 years</option>
+                        <option value="2-3 years">2-3 years</option>
+                        <option value="4-5 years">4-5 years</option>
+                        <option value="6-10 years">6-10 years</option>
+                        <option value="10+ years">10+ years</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="coverLetter">Cover Letter</label>
+                    <textarea id="coverLetter" rows="4" placeholder="Tell us why you want to join our team..." required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="resume">Resume</label>
+                    <div class="file-upload">
+                        <input type="file" id="resume" accept=".pdf,.doc,.docx">
+                        <label for="resume" class="file-upload-label">
+                            <i class="fas fa-cloud-upload-alt"></i>
+                            Click to upload or drag and drop
+                        </label>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-secondary btn-full">
+                    <i class="fas fa-paper-plane"></i> Submit Application
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

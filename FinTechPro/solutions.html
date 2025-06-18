@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solutions - FinTechPro | Comprehensive Financial Technology Services</title>
+    <meta name="description" content="Explore FinTechPro's comprehensive suite of financial technology solutions including payment processing, analytics, risk management, mobile banking, and AI-powered tools.">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-chart-line"></i>
+                <span>FinTechPro</span>
+            </div>
+            
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="solutions.html" class="nav-link active">Solutions</a>
+                <a href="partners.html" class="nav-link">Partners</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+            
+            <div class="nav-actions">
+                <button class="btn btn-outline" onclick="openModal('loginModal')">
+                    <i class="fas fa-sign-in-alt"></i> Login
+                </button>
+                <button class="btn btn-primary" onclick="openModal('signupModal')">
+                    <i class="fas fa-user-plus"></i> Sign Up
+                </button>
+                <button class="btn btn-secondary" onclick="openModal('joinModal')">
+                    <i class="fas fa-handshake"></i> Join Us
+                </button>
+            </div>
+            
+            <div class="nav-toggle" id="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="section-header" style="color: white; margin-top: 4rem;">
+                <h1 style="font-size: 3.5rem; margin-bottom: 1rem;">Comprehensive FinTech Solutions</h1>
+                <p style="font-size: 1.25rem; margin-bottom: 2rem;">Enterprise-grade financial technology solutions designed to accelerate your business growth and transform customer experiences</p>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <span style="background: rgba(255,255,255,0.2); color: white; padding: 0.5rem 1rem; border-radius: 2rem; border: 1px solid rgba(255,255,255,0.3);">AI-Powered</span>
+                    <span style="background: rgba(255,255,255,0.2); color: white; padding: 0.5rem 1rem; border-radius: 2rem; border: 1px solid rgba(255,255,255,0.3);">Enterprise-Ready</span>
+                    <span style="background: rgba(255,255,255,0.2); color: white; padding: 0.5rem 1rem; border-radius: 2rem; border: 1px solid rgba(255,255,255,0.3);">Globally Compliant</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solutions Overview -->
+    <section class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Solutions Portfolio</h2>
+                <p>Six comprehensive solutions that cover every aspect of modern financial technology</p>
+            </div>
+            
+            <div class="solutions-grid">
+                <div class="solution-card fade-in" onclick="showSolutionDetails('payment')">
+                    <div class="solution-icon primary">💳</div>
+                    <h3>Payment Processing</h3>
+                    <p style="color: var(--primary); font-weight: 600; margin-bottom: 0.5rem;">Secure, Fast & Reliable</p>
+                    <p>Advanced payment processing solutions that handle millions of transactions with enterprise-grade security and real-time fraud detection.</p>
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1rem;">
+                        <span style="font-size: 0.875rem; font-weight: 600; color: var(--primary);">Starting at 2.9% + $0.30</span>
+                        <i class="fas fa-arrow-right" style="color: var(--primary);"></i>
+                    </div>
+                </div>
+                
+                <div class="solution-card fade-in" onclick="showSolutionDetails('analytics')">
+                    <div class="solution-icon secondary">📊</div>
+                    <h3>Analytics Dashboard</h3>
+                    <p style="color: var(--primary); font-weight: 600; margin-bottom: 0.5rem;">Data-Driven Insights</p>
+                    <p>Comprehensive analytics platform that transforms your financial data into actionable insights with AI-powered predictions and custom reporting.</p>
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1rem;">
+                        <span style="font-size: 0.875rem; font-weight: 600; color: var(--primary);">Starting at $299/month</span>
+                        <i class="fas fa-arrow-right" style="color: var(--primary);"></i>
+                    </div>
+                </div>
+                
+                <div class="solution-card fade-in" onclick="showSolutionDetails('risk')">
+                    <div class="solution-icon accent">🛡️</div>
+                    <h3>Risk Management</h3>
+                    <p style="color: var(--primary); font-weight: 600; margin-bottom: 0.5rem;">AI-Powered Protection</p>
+                    <p>Comprehensive risk assessment and management platform powered by machine learning to identify, assess, and mitigate financial risks in real-time.</p>
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1rem;">
+                        <span style="font-size: 0.875rem; font-weight: 600; color: var(--primary);">Starting at $599/month</span>
+                        <i class="fas fa-arrow-right" style="color: var(--primary);"></i>
+                    </div>
+                </div>
+                
+                <div class="solution-card fade-in" onclick="showSolutionDetails('mobile')">
+                    <div class="solution-icon purple">📱</div>
+                    <h3>Mobile Banking</h3>
+                    <p style="color: var(--primary); font-weight: 600; margin-bottom: 0.5rem;">Next-Gen Experience</p>
+                    <p>White-label mobile banking solution with biometric security, AI assistance, and seamless user experience designed for modern financial institutions.</p>
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1rem;">
+                        <span style="font-size: 0.875rem; font-weight: 600; color: var(--primary);">Custom pricing available</span>
+                        <i class="fas fa-arrow-right" style="color: var(--primary);"></i>
+                    </div>
+                </div>
+                
+                <div class="solution-card fade-in" onclick="showSolutionDetails('wallet')">
+                    <div class="solution-icon pink">💰</div>
+                    <h3>Digital Wallet</h3>
+                    <p style="color: var(--primary); font-weight: 600; margin-bottom: 0.5rem;">Multi-Asset Platform</p>
+                    <p>Secure digital wallet solution supporting cryptocurrencies, fiat currencies, and digital assets with cold storage security and DeFi integration.</p>
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1rem;">
+                        <span style="font-size: 0.875rem; font-weight: 600; color: var(--primary);">Starting at $1,999/month</span>
+                        <i class="fas fa-arrow-right" style="color: var(--primary);"></i>
+                    </div>
+                </div>
+                
+                <div class="solution-card fade-in" onclick="showSolutionDetails('ai')">
+                    <div class="solution-icon indigo">🤖</div>
+                    <h3>AI Financial Assistant</h3>
+                    <p style="color: var(--primary); font-weight: 600; margin-bottom: 0.5rem;">Intelligent Automation</p>
+                    <p>Advanced AI-powered financial assistant that provides personalized insights, automates routine tasks, and delivers intelligent recommendations.</p>
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1rem;">
+                        <span style="font-size: 0.875rem; font-weight: 600; color: var(--primary);">Starting at $199/month</span>
+                        <i class="fas fa-arrow-right" style="color: var(--primary);"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detailed Solution View -->
+    <section class="solutions" id="solutionDetails">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start;">
+                <div class="fade-in">
+                    <div style="display: flex; align-items: center; margin-bottom: 1.5rem;" id="solutionHeader">
+                        <div class="solution-icon primary" style="margin-right: 1rem;">
+                            💳
+                        </div>
+                        <div>
+                            <h3 style="font-size: 2rem; margin: 0;">Payment Processing</h3>
+                            <p style="color: var(--primary); font-weight: 600; margin: 0;">Secure, Fast & Reliable</p>
+                        </div>
+                    </div>
+                    
+                    <p style="font-size: 1.125rem; color: var(--text-light); margin-bottom: 2rem;" id="solutionDescription">
+                        Advanced payment processing solutions that handle millions of transactions with enterprise-grade security and real-time fraud detection.
+                    </p>
+
+                    <div style="margin-bottom: 2rem;">
+                        <h4 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 1rem;">Key Features</h4>
+                        <div id="solutionFeatures">
+                            <div style="display: flex; align-items: center; margin-bottom: 0.75rem;">
+                                <i class="fas fa-check-circle" style="color: var(--accent); margin-right: 0.75rem;"></i>
+                                <span>Multi-currency support (150+ currencies)</span>
+                            </div>
+                            <div style="display: flex; align-items: center; margin-bottom: 0.75rem;">
+                                <i class="fas fa-check-circle" style="color: var(--accent); margin-right: 0.75rem;"></i>
+                                <span>Real-time fraud detection with AI</span>
+                            </div>
+                            <div style="display: flex; align-items: center; margin-bottom: 0.75rem;">
+                                <i class="fas fa-check-circle" style="color: var(--accent); margin-right: 0.75rem;"></i>
+                                <span>PCI DSS Level 1 compliance</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="margin-bottom: 2rem;">
+                        <h4 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 1rem;">Industries Served</h4>
+                        <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;" id="solutionIndustries">
+                            <span style="background: var(--gray-100); padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.875rem;">E-commerce</span>
+                            <span style="background: var(--gray-100); padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.875rem;">SaaS</span>
+                            <span style="background: var(--gray-100); padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.875rem;">Marketplaces</span>
+                            <span style="background: var(--gray-100); padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.875rem;">Healthcare</span>
+                        </div>
+                    </div>
+
+                    <div style="background: rgba(30, 58, 138, 0.05); border-radius: 1rem; padding: 1.5rem;">
+                        <h4 style="font-size: 1.125rem; font-weight: 600; margin-bottom: 0.75rem;">Pricing</h4>
+                        <p style="font-size: 1.5rem; font-weight: bold; color: var(--primary); margin-bottom: 1rem;" id="solutionPricing">Starting at 2.9% + $0.30 per transaction</p>
+                        <button class="btn btn-primary">Request Quote</button>
+                    </div>
+                </div>
+
+                <div class="fade-in">
+                    <div class="solution-card" style="margin-bottom: 2rem;">
+                        <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+                            <i class="fas fa-bolt" style="color: var(--secondary); margin-right: 0.5rem;"></i>
+                            <h4 style="margin: 0;">Key Benefits</h4>
+                        </div>
+                        <div id="solutionBenefits">
+                            <div style="display: flex; align-items: start; margin-bottom: 1rem;">
+                                <div style="background: var(--accent); color: white; border-radius: 50%; padding: 0.25rem; margin-right: 0.75rem; margin-top: 0.25rem;">
+                                    <i class="fas fa-check" style="font-size: 0.75rem;"></i>
+                                </div>
+                                <span style="font-size: 0.875rem;">99.9% uptime guarantee</span>
+                            </div>
+                            <div style="display: flex; align-items: start; margin-bottom: 1rem;">
+                                <div style="background: var(--accent); color: white; border-radius: 50%; padding: 0.25rem; margin-right: 0.75rem; margin-top: 0.25rem;">
+                                    <i class="fas fa-check" style="font-size: 0.75rem;"></i>
+                                </div>
+                                <span style="font-size: 0.875rem;">Reduce fraud by up to 95%</span>
+                            </div>
+                            <div style="display: flex; align-items: start; margin-bottom: 1rem;">
+                                <div style="background: var(--accent); color: white; border-radius: 50%; padding: 0.25rem; margin-right: 0.75rem; margin-top: 0.25rem;">
+                                    <i class="fas fa-check" style="font-size: 0.75rem;"></i>
+                                </div>
+                                <span style="font-size: 0.875rem;">Increase conversion rates by 15%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="solution-card">
+                        <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+                            <i class="fas fa-shield-alt" style="color: var(--primary); margin-right: 0.5rem;"></i>
+                            <h4 style="margin: 0;">Security & Compliance</h4>
+                        </div>
+                        <div>
+                            <div style="display: flex; align-items: center; margin-bottom: 0.75rem;">
+                                <i class="fas fa-check-circle" style="color: var(--accent); margin-right: 0.5rem; font-size: 1rem;"></i>
+                                <span style="font-size: 0.875rem;">SOC 2 Type II Certified</span>
+                            </div>
+                            <div style="display: flex; align-items: center; margin-bottom: 0.75rem;">
+                                <i class="fas fa-check-circle" style="color: var(--accent); margin-right: 0.5rem; font-size: 1rem;"></i>
+                                <span style="font-size: 0.875rem;">PCI DSS Level 1 Compliance</span>
+                            </div>
+                            <div style="display: flex; align-items: center; margin-bottom: 0.75rem;">
+                                <i class="fas fa-check-circle" style="color: var(--accent); margin-right: 0.5rem; font-size: 1rem;"></i>
+                                <span style="font-size: 0.875rem;">GDPR & CCPA Compliant</span>
+                            </div>
+                            <div style="display: flex; align-items: center;">
+                                <i class="fas fa-check-circle" style="color: var(--accent); margin-right: 0.5rem; font-size: 1rem;"></i>
+                                <span style="font-size: 0.875rem;">ISO 27001 Certified</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Selector -->
+    <section class="about">
+        <div class="container">
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem;">
+                <button class="btn btn-primary" onclick="showSolutionDetails('payment')">
+                    <i class="fas fa-credit-card"></i> Payment Processing
+                </button>
+                <button class="btn btn-outline" onclick="showSolutionDetails('analytics')">
+                    <i class="fas fa-chart-bar"></i> Analytics Dashboard
+                </button>
+                <button class="btn btn-outline" onclick="showSolutionDetails('risk')">
+                    <i class="fas fa-shield-alt"></i> Risk Management
+                </button>
+                <button class="btn btn-outline" onclick="showSolutionDetails('mobile')">
+                    <i class="fas fa-mobile-alt"></i> Mobile Banking
+                </button>
+                <button class="btn btn-outline" onclick="showSolutionDetails('wallet')">
+                    <i class="fas fa-wallet"></i> Digital Wallet
+                </button>
+                <button class="btn btn-outline" onclick="showSolutionDetails('ai')">
+                    <i class="fas fa-robot"></i> AI Assistant
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Integration Section -->
+    <section class="solutions">
+        <div class="container">
+            <div class="section-header">
+                <h2>Seamless Integrations</h2>
+                <p>Connect with your existing tools and systems through our comprehensive API and pre-built integrations</p>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 2rem;">
+                <div style="text-align: center; opacity: 0.6; transition: opacity 0.3s;" class="fade-in" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.6'">
+                    <div style="background: white; border-radius: 0.5rem; padding: 1rem; box-shadow: var(--shadow-sm);">
+                        <div style="font-size: 1.125rem; font-weight: 600; color: var(--text-light);">Salesforce</div>
+                    </div>
+                </div>
+                <div style="text-align: center; opacity: 0.6; transition: opacity 0.3s;" class="fade-in" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.6'">
+                    <div style="background: white; border-radius: 0.5rem; padding: 1rem; box-shadow: var(--shadow-sm);">
+                        <div style="font-size: 1.125rem; font-weight: 600; color: var(--text-light);">QuickBooks</div>
+                    </div>
+                </div>
+                <div style="text-align: center; opacity: 0.6; transition: opacity 0.3s;" class="fade-in" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.6'">
+                    <div style="background: white; border-radius: 0.5rem; padding: 1rem; box-shadow: var(--shadow-sm);">
+                        <div style="font-size: 1.125rem; font-weight: 600; color: var(--text-light);">AWS</div>
+                    </div>
+                </div>
+                <div style="text-align: center; opacity: 0.6; transition: opacity 0.3s;" class="fade-in" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.6'">
+                    <div style="background: white; border-radius: 0.5rem; padding: 1rem; box-shadow: var(--shadow-sm);">
+                        <div style="font-size: 1.125rem; font-weight: 600; color: var(--text-light);">Stripe</div>
+                    </div>
+                </div>
+                <div style="text-align: center; opacity: 0.6; transition: opacity 0.3s;" class="fade-in" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.6'">
+                    <div style="background: white; border-radius: 0.5rem; padding: 1rem; box-shadow: var(--shadow-sm);">
+                        <div style="font-size: 1.125rem; font-weight: 600; color: var(--text-light);">PayPal</div>
+                    </div>
+                </div>
+                <div style="text-align: center; opacity: 0.6; transition: opacity 0.3s;" class="fade-in" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.6'">
+                    <div style="background: white; border-radius: 0.5rem; padding: 1rem; box-shadow: var(--shadow-sm);">
+                        <div style="font-size: 1.125rem; font-weight: 600; color: var(--text-light);">Oracle</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="section-header" style="color: white;">
+                <h2>Ready to Transform Your Business?</h2>
+                <p>Join thousands of businesses worldwide who trust FinTechPro for their financial technology needs</p>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem;">
+                    <button class="btn btn-secondary btn-large" onclick="openModal('signupModal')">
+                        Start Free Trial
+                    </button>
+                    <button class="btn btn-outline-white btn-large">
+                        Schedule Demo
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-chart-line"></i>
+                        <span>FinTechPro</span>
+                    </div>
+                    <p>Empowering businesses with cutting-edge financial technology solutions for the digital age.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Solutions</h4>
+                    <ul>
+                        <li><a href="solutions.html">Payment Processing</a></li>
+                        <li><a href="solutions.html">Analytics Dashboard</a></li>
+                        <li><a href="solutions.html">Risk Management</a></li>
+                        <li><a href="solutions.html">Mobile Banking</a></li>
+                        <li><a href="solutions.html">Digital Wallet</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">API Reference</a></li>
+                        <li><a href="#">Security</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2024 FinTechPro. All rights reserved. | Powered by advanced financial technology solutions.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modals (same as index.html) -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Welcome Back</h2>
+                <span class="close" onclick="closeModal('loginModal')">&times;</span>
+            </div>
+            <form class="modal-form">
+                <div class="form-group">
+                    <label for="loginEmail">Email</label>
+                    <input type="email" id="loginEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Password</label>
+                    <input type="password" id="loginPassword" required>
+                </div>
+                <div class="form-options">
+                    <label class="checkbox-label">
+                        <input type="checkbox"> Remember me
+                    </label>
+                    <a href="#" class="forgot-password">Forgot password?</a>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full">Sign In</button>
+                <p class="modal-switch">Don't have an account? <a href="#" onclick="switchModal('loginModal', 'signupModal')">Sign up</a></p>
+            </form>
+        </div>
+    </div>
+
+    <div id="signupModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Create Account</h2>
+                <span class="close" onclick="closeModal('signupModal')">&times;</span>
+            </div>
+            <form class="modal-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="signupFirstName">First Name</label>
+                        <input type="text" id="signupFirstName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signupLastName">Last Name</label>
+                        <input type="text" id="signupLastName" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="signupEmail">Email</label>
+                    <input type="email" id="signupEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="signupPassword">Password</label>
+                    <input type="password" id="signupPassword" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" id="confirmPassword" required>
+                </div>
+                <div class="form-options">
+                    <label class="checkbox-label">
+                        <input type="checkbox" required> I agree to the Terms of Service and Privacy Policy
+                    </label>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full">Create Account</button>
+                <p class="modal-switch">Already have an account? <a href="#" onclick="switchModal('signupModal', 'loginModal')">Sign in</a></p>
+            </form>
+        </div>
+    </div>
+
+    <div id="joinModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Join Our Team</h2>
+                <span class="close" onclick="closeModal('joinModal')">&times;</span>
+            </div>
+            <form class="modal-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="joinFirstName">First Name</label>
+                        <input type="text" id="joinFirstName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="joinLastName">Last Name</label>
+                        <input type="text" id="joinLastName" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="joinEmail">Email</label>
+                    <input type="email" id="joinEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="position">Position of Interest</label>
+                    <select id="position" required>
+                        <option value="">Select a position</option>
+                        <option value="Software Engineer">Software Engineer</option>
+                        <option value="Product Manager">Product Manager</option>
+                        <option value="Data Scientist">Data Scientist</option>
+                        <option value="UX/UI Designer">UX/UI Designer</option>
+                        <option value="Sales Executive">Sales Executive</option>
+                        <option value="Marketing Specialist">Marketing Specialist</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="experience">Years of Experience</label>
+                    <select id="experience" required>
+                        <option value="">Select experience level</option>
+                        <option value="0-1 years">0-1 years</option>
+                        <option value="2-3 years">2-3 years</option>
+                        <option value="4-5 years">4-5 years</option>
+                        <option value="6-10 years">6-10 years</option>
+                        <option value="10+ years">10+ years</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="coverLetter">Cover Letter</label>
+                    <textarea id="coverLetter" rows="4" placeholder="Tell us why you want to join our team..." required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="resume">Resume</label>
+                    <div class="file-upload">
+                        <input type="file" id="resume" accept=".pdf,.doc,.docx">
+                        <label for="resume" class="file-upload-label">
+                            <i class="fas fa-cloud-upload-alt"></i>
+                            Click to upload or drag and drop
+                        </label>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-secondary btn-full">
+                    <i class="fas fa-paper-plane"></i> Submit Application
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/main.js"></script>
+    <script>
+        // Solution details data
+        const solutionData = {
+            payment: {
+                icon: '💳',
+                iconClass: 'primary',
+                title: 'Payment Processing',
+                subtitle: 'Secure, Fast & Reliable',
+                description: 'Advanced payment processing solutions that handle millions of transactions with enterprise-grade security and real-time fraud detection.',
+                features: [
+                    'Multi-currency support (150+ currencies)',
+                    'Real-time fraud detection with AI',
+                    'PCI DSS Level 1 compliance',
+                    'Sub-second transaction processing',
+                    'Advanced reporting and analytics',
+                    'API-first integration approach'
+                ],
+                industries: ['E-commerce', 'SaaS', 'Marketplaces', 'Healthcare'],
+                benefits: [
+                    '99.9% uptime guarantee',
+                    'Reduce fraud by up to 95%',
+                    'Increase conversion rates by 15%',
+                    'Support for 40+ payment methods'
+                ],
+                pricing: 'Starting at 2.9% + $0.30 per transaction'
+            },
+            analytics: {
+                icon: '📊',
+                iconClass: 'secondary',
+                title: 'Analytics Dashboard',
+                subtitle: 'Data-Driven Insights',
+                description: 'Comprehensive analytics platform that transforms your financial data into actionable insights with AI-powered predictions and custom reporting.',
+                features: [
+                    'Real-time financial dashboards',
+                    'Predictive analytics with ML',
+                    'Custom report builder',
+                    'Data visualization tools',
+                    'Automated alerts and notifications',
+                    'Integration with 100+ data sources'
+                ],
+                industries: ['Banking', 'Investment', 'Insurance', 'Corporate Finance'],
+                benefits: [
+                    'Reduce reporting time by 80%',
+                    'Improve forecast accuracy by 40%',
+                    'Real-time risk monitoring',
+                    'Compliance automation'
+                ],
+                pricing: 'Starting at $299/month'
+            },
+            risk: {
+                icon: '🛡️',
+                iconClass: 'accent',
+                title: 'Risk Management',
+                subtitle: 'AI-Powered Protection',
+                description: 'Comprehensive risk assessment and management platform powered by machine learning to identify, assess, and mitigate financial risks in real-time.',
+                features: [
+                    'AI-powered credit scoring',
+                    'Real-time risk monitoring',
+                    'Automated compliance checks',
+                    'Portfolio risk analysis',
+                    'Stress testing capabilities',
+                    'Regulatory reporting automation'
+                ],
+                industries: ['Banking', 'Lending', 'Insurance', 'Investment Management'],
+                benefits: [
+                    'Reduce default rates by 30%',
+                    'Automate 90% of compliance tasks',
+                    'Early risk detection',
+                    'Regulatory compliance assurance'
+                ],
+                pricing: 'Starting at $599/month'
+            },
+            mobile: {
+                icon: '📱',
+                iconClass: 'purple',
+                title: 'Mobile Banking',
+                subtitle: 'Next-Gen Experience',
+                description: 'White-label mobile banking solution with biometric security, AI assistance, and seamless user experience designed for modern financial institutions.',
+                features: [
+                    'Biometric authentication',
+                    'Voice banking capabilities',
+                    'Instant P2P transfers',
+                    'Digital wallet integration',
+                    'Personal financial management',
+                    'Multi-platform compatibility'
+                ],
+                industries: ['Banks', 'Credit Unions', 'Neobanks', 'Financial Services'],
+                benefits: [
+                    'Increase customer engagement by 60%',
+                    'Reduce operational costs by 40%',
+                    'Enhanced security features',
+                    'Faster time-to-market'
+                ],
+                pricing: 'Custom pricing available'
+            },
+            wallet: {
+                icon: '💰',
+                iconClass: 'pink',
+                title: 'Digital Wallet',
+                subtitle: 'Multi-Asset Platform',
+                description: 'Secure digital wallet solution supporting cryptocurrencies, fiat currencies, and digital assets with cold storage security and DeFi integration.',
+                features: [
+                    'Multi-asset support (crypto & fiat)',
+                    'Cold storage security',
+                    'DeFi protocol integration',
+                    'Cross-chain compatibility',
+                    'Institutional-grade custody',
+                    'Regulatory compliance built-in'
+                ],
+                industries: ['Crypto Exchanges', 'Investment Firms', 'Banks', 'FinTech Startups'],
+                benefits: [
+                    'Bank-level security standards',
+                    'Support for 200+ cryptocurrencies',
+                    'Regulatory compliance',
+                    'Seamless user experience'
+                ],
+                pricing: 'Starting at $1,999/month'
+            },
+            ai: {
+                icon: '🤖',
+                iconClass: 'indigo',
+                title: 'AI Financial Assistant',
+                subtitle: 'Intelligent Automation',
+                description: 'Advanced AI-powered financial assistant that provides personalized insights, automates routine tasks, and delivers intelligent recommendations.',
+                features: [
+                    'Natural language processing',
+                    'Personalized spending insights',
+                    'Investment recommendations',
+                    'Automated budgeting',
+                    'Financial goal tracking',
+                    '24/7 customer support automation'
+                ],
+                industries: ['Wealth Management', 'Personal Finance', 'Banking', 'Insurance'],
+                benefits: [
+                    'Reduce support costs by 70%',
+                    'Improve customer satisfaction by 45%',
+                    'Personalized financial advice',
+                    'Automated task completion'
+                ],
+                pricing: 'Starting at $199/month'
+            }
+        };
+
+        function showSolutionDetails(solutionKey) {
+            const solution = solutionData[solutionKey];
+            
+            // Update header
+            const header = document.getElementById('solutionHeader');
+            header.innerHTML = `
+                <div class="solution-icon ${solution.iconClass}" style="margin-right: 1rem;">
+                    ${solution.icon}
+                </div>
+                <div>
+                    <h3 style="font-size: 2rem; margin: 0;">${solution.title}</h3>
+                    <p style="color: var(--primary); font-weight: 600; margin: 0;">${solution.subtitle}</p>
+                </div>
+            `;
+            
+            // Update description
+            document.getElementById('solutionDescription').textContent = solution.description;
+            
+            // Update features
+            const featuresHtml = solution.features.map(feature => `
+                <div style="display: flex; align-items: center; margin-bottom: 0.75rem;">
+                    <i class="fas fa-check-circle" style="color: var(--accent); margin-right: 0.75rem;"></i>
+                    <span>${feature}</span>
+                </div>
+            `).join('');
+            document.getElementById('solutionFeatures').innerHTML = featuresHtml;
+            
+            // Update industries
+            const industriesHtml = solution.industries.map(industry => 
+                `<span style="background: var(--gray-100); padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.875rem;">${industry}</span>`
+            ).join('');
+            document.getElementById('solutionIndustries').innerHTML = industriesHtml;
+            
+            // Update benefits
+            const benefitsHtml = solution.benefits.map(benefit => `
+                <div style="display: flex; align-items: start; margin-bottom: 1rem;">
+                    <div style="background: var(--accent); color: white; border-radius: 50%; padding: 0.25rem; margin-right: 0.75rem; margin-top: 0.25rem;">
+                        <i class="fas fa-check" style="font-size: 0.75rem;"></i>
+                    </div>
+                    <span style="font-size: 0.875rem;">${benefit}</span>
+                </div>
+            `).join('');
+            document.getElementById('solutionBenefits').innerHTML = benefitsHtml;
+            
+            // Update pricing
+            document.getElementById('solutionPricing').textContent = solution.pricing;
+            
+            // Update selector buttons
+            const buttons = document.querySelectorAll('.btn');
+            buttons.forEach(btn => {
+                if (btn.onclick && btn.onclick.toString().includes(solutionKey)) {
+                    btn.className = 'btn btn-primary';
+                } else if (btn.onclick && btn.onclick.toString().includes('showSolutionDetails')) {
+                    btn.className = 'btn btn-outline';
+                }
+            });
+            
+            // Scroll to details section
+            document.getElementById('solutionDetails').scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>

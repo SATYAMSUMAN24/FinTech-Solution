@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partners - FinTechPro | Global Partnership Network</title>
+    <meta name="description" content="Explore FinTechPro's global partnership network spanning technology, financial services, and regulatory domains across 73 countries worldwide.">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-chart-line"></i>
+                <span>FinTechPro</span>
+            </div>
+            
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="solutions.html" class="nav-link">Solutions</a>
+                <a href="partners.html" class="nav-link active">Partners</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+            
+            <div class="nav-actions">
+                <button class="btn btn-outline" onclick="openModal('loginModal')">
+                    <i class="fas fa-sign-in-alt"></i> Login
+                </button>
+                <button class="btn btn-primary" onclick="openModal('signupModal')">
+                    <i class="fas fa-user-plus"></i> Sign Up
+                </button>
+                <button class="btn btn-secondary" onclick="openModal('joinModal')">
+                    <i class="fas fa-handshake"></i> Join Us
+                </button>
+            </div>
+            
+            <div class="nav-toggle" id="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="section-header" style="color: white; margin-top: 4rem;">
+                <h1 style="font-size: 3.5rem; margin-bottom: 1rem;">Our Global Partner Network</h1>
+                <p style="font-size: 1.25rem; margin-bottom: 2rem;">Collaborating with industry leaders to deliver comprehensive financial technology solutions worldwide</p>
+                <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; max-width: 800px; margin: 0 auto;">
+                    <div style="text-align: center;">
+                        <div style="font-size: 2rem; font-weight: bold; color: var(--secondary);">430+</div>
+                        <div style="opacity: 0.8;">Global Partners</div>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="font-size: 2rem; font-weight: bold; color: var(--secondary);">73</div>
+                        <div style="opacity: 0.8;">Countries</div>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="font-size: 2rem; font-weight: bold; color: var(--secondary);">99%</div>
+                        <div style="opacity: 0.8;">Partner Satisfaction</div>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="font-size: 2rem; font-weight: bold; color: var(--secondary);">24/7</div>
+                        <div style="opacity: 0.8;">Global Support</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partner Categories -->
+    <section class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>Partner Ecosystem</h2>
+                <p>Our comprehensive partner network spans technology, financial services, and regulatory domains</p>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-bottom: 3rem;">
+                <div class="solution-card fade-in" style="cursor: pointer; border: 2px solid var(--primary);" onclick="showPartnerCategory('technology')">
+                    <div class="solution-icon primary">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Technology Partners</h3>
+                    <p>Leading tech companies that integrate with our platform</p>
+                    <div style="text-align: center; margin-top: 1rem;">
+                        <span style="background: var(--gray-100); padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.875rem;">4 Partners</span>
+                    </div>
+                </div>
+                
+                <div class="solution-card fade-in" style="cursor: pointer;" onclick="showPartnerCategory('financial')">
+                    <div class="solution-icon secondary">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3>Financial Partners</h3>
+                    <p>Banks and financial institutions we collaborate with</p>
+                    <div style="text-align: center; margin-top: 1rem;">
+                        <span style="background: var(--gray-100); padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.875rem;">4 Partners</span>
+                    </div>
+                </div>
+                
+                <div class="solution-card fade-in" style="cursor: pointer;" onclick="showPartnerCategory('regulatory')">
+                    <div class="solution-icon accent">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Regulatory Partners</h3>
+                    <p>Compliance and regulatory solution providers</p>
+                    <div style="text-align: center; margin-top: 1rem;">
+                        <span style="background: var(--gray-100); padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.875rem;">4 Partners</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Selected Category Details -->
+            <div class="fade-in" id="partnerDetails">
+                <h3 style="text-align: center; font-size: 2rem; margin-bottom: 2rem;">Technology Partners</h3>
+                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem;" id="partnerGrid">
+                    <!-- Partner cards will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Global Presence -->
+    <section class="solutions">
+        <div class="container">
+            <div class="section-header">
+                <h2>Global Reach</h2>
+                <p>Our partner network spans across all major regions, ensuring local expertise and global capabilities</p>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 1.5rem;">
+                <div class="solution-card fade-in" style="text-align: center;">
+                    <i class="fas fa-globe" style="font-size: 3rem; color: var(--primary); margin-bottom: 1rem;"></i>
+                    <h4>North America</h4>
+                    <div style="margin-top: 1rem;">
+                        <div style="font-size: 1.5rem; font-weight: bold; color: var(--primary);">150</div>
+                        <div style="font-size: 0.875rem; color: var(--text-light);">Partners</div>
+                    </div>
+                    <div style="margin-top: 0.5rem;">
+                        <div style="font-size: 1.25rem; font-weight: 600;">3</div>
+                        <div style="font-size: 0.875rem; color: var(--text-light);">Countries</div>
+                    </div>
+                </div>
+                
+                <div class="solution-card fade-in" style="text-align: center;">
+                    <i class="fas fa-globe" style="font-size: 3rem; color: var(--primary); margin-bottom: 1rem;"></i>
+                    <h4>Europe</h4>
+                    <div style="margin-top: 1rem;">
+                        <div style="font-size: 1.5rem; font-weight: bold; color: var(--primary);">120</div>
+                        <div style="font-size: 0.875rem; color: var(--text-light);">Partners</div>
+                    </div>
+                    <div style="margin-top: 0.5rem;">
+                        <div style="font-size: 1.25rem; font-weight: 600;">25</div>
+                        <div style="font-size: 0.875rem; color: var(--text-light);">Countries</div>
+                    </div>
+                </div>
+                
+                <div class="solution-card fade-in" style="text-align: center;">
+                    <i class="fas fa-globe" style="font-size: 3rem; color: var(--primary); margin-bottom: 1rem;"></i>
+                    <h4>Asia Pacific</h4>
+                    <div style="margin-top: 1rem;">
+                        <div style="font-size: 1.5rem; font-weight: bold; color: var(--primary);">80</div>
+                        <div style="font-size: 0.875rem; color: var(--text-light);">Partners</div>
+                    </div>
+                    <div style="margin-top: 0.5rem;">
+                        <div style="font-size: 1.25rem; font-weight: 600;">15</div>
+                        <div style="font-size: 0.875rem; color: var(--text-light);">Countries</div>
+                    </div>
+                </div>
+                
+                <div class="solution-card fade-in" style="text-align: center;">
+                    <i class="fas fa-globe" style="font-size: 3rem; color: var(--primary); margin-bottom: 1rem;"></i>
+                    <h4>Latin America</h4>
+                    <div style="margin-top: 1rem;">
+                        <div style="font-size: 1.5rem; font-weight: bold; color: var(--primary);">45</div>
+                        <div style="font-size: 0.875rem; color: var(--text-light);">Partners</div>
+                    </div>
+                    <div style="margin-top: 0.5rem;">
+                        <div style="font-size: 1.25rem; font-weight: 600;">12</div>
+                        <div style="font-size: 0.875rem; color: var(--text-light);">Countries</div>
+                    </div>
+                </div>
+                
+                <div class="solution-card fade-in" style="text-align: center;">
+                    <i class="fas fa-globe" style="font-size: 3rem; color: var(--primary); margin-bottom: 1rem;"></i>
+                    <h4>MEA</h4>
+                    <div style="margin-top: 1rem;">
+                        <div style="font-size: 1.5rem; font-weight: bold; color: var(--primary);">35</div>
+                        <div style="font-size: 0.875rem; color: var(--text-light);">Partners</div>
+                    </div>
+                    <div style="margin-top: 0.5rem;">
+                        <div style="font-size: 1.25rem; font-weight: 600;">18</div>
+                        <div style="font-size: 0.875rem; color: var(--text-light);">Countries</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Stories -->
+    <section class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>Partnership Success Stories</h2>
+                <p>Real results from our strategic partnerships that drive innovation and growth</p>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;">
+                <div class="solution-card fade-in">
+                    <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+                        <i class="fas fa-award" style="color: var(--secondary); margin-right: 0.5rem;"></i>
+                        <h4 style="margin: 0;">Microsoft Azure</h4>
+                    </div>
+                    <h5 style="font-size: 1.125rem; margin-bottom: 0.75rem;">Scaling Global Payment Processing</h5>
+                    <p style="font-size: 0.9rem; color: var(--text-light); margin-bottom: 1rem;">Leveraged Azure's global infrastructure to process 10M+ transactions daily across 50+ countries.</p>
+                    
+                    <div style="background: rgba(245, 158, 11, 0.1); border-radius: 0.5rem; padding: 1rem; margin-bottom: 1rem;">
+                        <div style="font-weight: 600; color: var(--secondary);">300% increase in transaction volume</div>
+                    </div>
+                    
+                    <h6 style="font-weight: 600; margin-bottom: 0.5rem;">Key Metrics:</h6>
+                    <div style="font-size: 0.875rem;">
+                        <div style="display: flex; align-items: center; margin-bottom: 0.25rem;">
+                            <i class="fas fa-trending-up" style="color: var(--accent); margin-right: 0.5rem; font-size: 1rem;"></i>
+                            99.99% uptime
+                        </div>
+                        <div style="display: flex; align-items: center; margin-bottom: 0.25rem;">
+                            <i class="fas fa-trending-up" style="color: var(--accent); margin-right: 0.5rem; font-size: 1rem;"></i>
+                            10M+ daily transactions
+                        </div>
+                        <div style="display: flex; align-items: center;">
+                            <i class="fas fa-trending-up" style="color: var(--accent); margin-right: 0.5rem; font-size: 1rem;"></i>
+                            50+ countries
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="solution-card fade-in">
+                    <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+                        <i class="fas fa-award" style="color: var(--secondary); margin-right: 0.5rem;"></i>
+                        <h4 style="margin: 0;">JPMorgan Chase</h4>
+                    </div>
+                    <h5 style="font-size: 1.125rem; margin-bottom: 0.75rem;">Enterprise Banking Integration</h5>
+                    <p style="font-size: 0.9rem; color: var(--text-light); margin-bottom: 1rem;">Integrated corporate banking services to provide seamless B2B payment solutions.</p>
+                    
+                    <div style="background: rgba(245, 158, 11, 0.1); border-radius: 0.5rem; padding: 1rem; margin-bottom: 1rem;">
+                        <div style="font-weight: 600; color: var(--secondary);">$5B+ in processed transactions</div>
+                    </div>
+                    
+                    <h6 style="font-weight: 600; margin-bottom: 0.5rem;">Key Metrics:</h6>
+                    <div style="font-size: 0.875rem;">
+                        <div style="display: flex; align-items: center; margin-bottom: 0.25rem;">
+                            <i class="fas fa-trending-up" style="color: var(--accent); margin-right: 0.5rem; font-size: 1rem;"></i>
+                            $5B+ processed
+                        </div>
+                        <div style="display: flex; align-items: center; margin-bottom: 0.25rem;">
+                            <i class="fas fa-trending-up" style="color: var(--accent); margin-right: 0.5rem; font-size: 1rem;"></i>
+                            500+ enterprise clients
+                        </div>
+                        <div style="display: flex; align-items: center;">
+                            <i class="fas fa-trending-up" style="color: var(--accent); margin-right: 0.5rem; font-size: 1rem;"></i>
+                            15 countries
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="solution-card fade-in">
+                    <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+                        <i class="fas fa-award" style="color: var(--secondary); margin-right: 0.5rem;"></i>
+                        <h4 style="margin: 0;">Salesforce</h4>
+                    </div>
+                    <h5 style="font-size: 1.125rem; margin-bottom: 0.75rem;">Customer Experience Transformation</h5>
+                    <p style="font-size: 0.9rem; color: var(--text-light); margin-bottom: 1rem;">Enhanced customer onboarding and support through integrated CRM solutions.</p>
+                    
+                    <div style="background: rgba(245, 158, 11, 0.1); border-radius: 0.5rem; padding: 1rem; margin-bottom: 1rem;">
+                        <div style="font-weight: 600; color: var(--secondary);">40% improvement in customer satisfaction</div>
+                    </div>
+                    
+                    <h6 style="font-weight: 600; margin-bottom: 0.5rem;">Key Metrics:</h6>
+                    <div style="font-size: 0.875rem;">
+                        <div style="display: flex; align-items: center; margin-bottom: 0.25rem;">
+                            <i class="fas fa-trending-up" style="color: var(--accent); margin-right: 0.5rem; font-size: 1rem;"></i>
+                            40% satisfaction increase
+                        </div>
+                        <div style="display: flex; align-items: center; margin-bottom: 0.25rem;">
+                            <i class="fas fa-trending-up" style="color: var(--accent); margin-right: 0.5rem; font-size: 1rem;"></i>
+                            50% faster onboarding
+                        </div>
+                        <div style="display: flex; align-items: center;">
+                            <i class="fas fa-trending-up" style="color: var(--accent); margin-right: 0.5rem; font-size: 1rem;"></i>
+                            24/7 support
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partner Programs -->
+    <section class="solutions">
+        <div class="container">
+            <div class="section-header">
+                <h2>Partner Programs</h2>
+                <p>Join our ecosystem and unlock new opportunities for growth and innovation</p>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;">
+                <div class="solution-card fade-in">
+                    <div style="text-align: center;">
+                        <div class="solution-icon primary">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h3>Technology Integration</h3>
+                        <p>Join our technology partner ecosystem</p>
+                    </div>
+                    
+                    <div style="margin: 1.5rem 0;">
+                        <h5 style="font-weight: 600; margin-bottom: 0.75rem;">Benefits:</h5>
+                        <div style="font-size: 0.875rem;">
+                            <div style="display: flex; align-items: center; margin-bottom: 0.5rem;">
+                                <i class="fas fa-check-circle" style="color: var(--accent); margin-right: 0.5rem;"></i>
+                                Access to FinTechPro APIs
+                            </div>
+                            <div style="display: flex; align-items: center; margin-bottom: 0.5rem;">
+                                <i class="fas fa-check-circle" style="color: var(--accent); margin-right: 0.5rem;"></i>
+                                Co-marketing opportunities
+                            </div>
+                            <div style="display: flex; align-items: center; margin-bottom: 0.5rem;">
+                                <i class="fas fa-check-circle" style="color: var(--accent); margin-right: 0.5rem;"></i>
+                                Technical support and training
+                            </div>
+                            <div style="display: flex; align-items: center;">
+                                <i class="fas fa-check-circle" style="color: var(--accent); margin-right: 0.5rem;"></i>
+                                Revenue sharing models
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div style="margin: 1.5rem 0;">
+                        <h5 style="font-weight: 600; margin-bottom: 0.75rem;">Requirements:</h5>
+                        <div style="font-size: 0.875rem;">
+                            <div style="display: flex; align-items: center; margin-bottom: 0.5rem;">
+                                <i class="fas fa-star" style="color: var(--secondary); margin-right: 0.5rem;"></i>
+                                Proven technology solution
+                            </div>
+                            <div style="display: flex; align-items: center; margin-bottom: 0.5rem;">
+                                <i class="fas fa-star" style="color: var(--secondary); margin-right: 0.5rem;"></i>
+                                Security certifications
+                            </div>
+                            <div style="display: flex; align-items: center; margin-bottom: 0.5rem;">
+                                <i class="fas fa-star" style="color: var(--secondary); margin-right: 0.5rem;"></i>
+                                Dedicated integration team
+                            </div>
+                            <div style="display: flex; align-items: center;">
+                                <i class="fas fa-star" style="color: var(--secondary); margin-right: 0.5rem;"></i>
+                                Customer references
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button class="btn btn-primary" style="width: 100%;">
+                        Apply Now <i class="fas fa-arrow-right" style="margin-left: 0.5rem;"></i>
+                    </button>
+                </div>
+                
+                <div class="solution-card fade-in">
+                    <div style="text-align: center;">
+                        <div class="solution-icon secondary">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>Reseller Program</h3>
+                        <p>Become an authorized FinTechPro reseller</p>
+                    </div>
+                    
+                    <div style="margin: 1.5rem 0;">
+                        <h5 style="font-weight: 600; margin-bottom: 0.75rem;">Benefits:</h5>
+                        <div style="font-size: 0.875rem;">
+                            <div style="display: flex; align-items: center; margin-bottom: 0.5rem;">
+                                <i class="fas fa-check-circle" style="color: var(--accent); margin-right: 0.5rem;"></i>
+                                Attractive commission structure
+                            </div>
+                            <div style="display: flex; align-items: center; margin-bottom: 0.5rem;">
+                                <i class="fas fa-check-circle" style="color: var(--accent); margin-right: 0.5rem;"></i>
+                                Sales training and certification
+                            </div>
+                            <div style="display: flex; align-items: center; margin-bottom: 0.5rem;">
+                                <i class="fas fa-check-circle" style="color: var(--accent); margin-right: 0.5rem;"></i>
+                                Marketing support materials
+                            </div>
+                            <div style="display: flex; align-items: center;">
+                                <i class="fas fa-check-circle" style="color: var(--accent); margin-right: 0.5rem;"></i>
+                                Lead sharing program
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div style="margin: 1.5rem 0;">
+                        <h5 style="font-weight: 600; margin-bottom: 0.75rem;">Requirements:</h5>
+                        <div style="font-size: 0.875rem;">
+                            <div style="display: flex; align-items: center; margin-bottom: 0.5rem;">
+                                <i class="fas fa-star" style="color: var(--secondary); margin-right: 0.5rem;"></i>
+                                Established client base
+                            </div>
+                            <div style="display: flex; align-items: center; margin-bottom: 0.5rem;">
+                                <i class="fas fa-star" style="color: var(--secondary); margin-right: 0.5rem;"></i>
+                                Sales track record
+                            </div>
+                            <div style="display: flex; align-items: center; margin-bottom: 0.5rem;">
+                                <i class="fas fa-star" style="color: var(--secondary); margin-right: 0.5rem;"></i>
+                                Market expertise
+                            </div>
+                            <div style="display: flex; align-items: center;">
+                                <i class="fas fa-star" style="color: var(--secondary); margin-right: 0.5rem;"></i>
+                                Dedicated sales team
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button class="btn btn-primary" style="width: 100%;">
+                        Apply Now <i class="fas fa-arrow-right" style="margin-left: 0.5rem;"></i>
+                    </button>
+                </div>
+                
+                <div class="solution-card fade-in">
+                    <div style="text-align: center;">
+                        <div class="solution-icon accent">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <h3>Solution Provider</h3>
+                        <p>Build specialized solutions on our platform</p>
+                    </div>
+                    
+                    <div style="margin: 1.5rem 0;">
+                        <h5 style="font-weight: 600; margin-bottom: 0.75rem;">Benefits:</h5>
+                        <div style="font-size: 0.875rem;">
+                            <div style="display: flex; align-items: center; margin-bottom: 0.5rem;">
+                                <i class="fas fa-check-circle" style="color: var(--accent); margin-right: 0.5rem;"></i>
+                                Platform access and tools
+                            </div>
+                            <div style="display: flex; align-items: center; margin-bottom: 0.5rem;">
+                                <i class="fas fa-check-circle" style="color: var(--accent); margin-right: 0.5rem;"></i>
+                                Go-to-market support
+                            </div>
+                            <div style="display: flex; align-items: center; margin-bottom: 0.5rem;">
+                                <i class="fas fa-check-circle" style="color: var(--accent); margin-right: 0.5rem;"></i>
+                                Joint solution development
+                            </div>
+                            <div style="display: flex; align-items: center;">
+                                <i class="fas fa-check-circle" style="color: var(--accent); margin-right: 0.5rem;"></i>
+                                Priority technical support
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div style="margin: 1.5rem 0;">
+                        <h5 style="font-weight: 600; margin-bottom: 0.75rem;">Requirements:</h5>
+                        <div style="font-size: 0.875rem;">
+                            <div style="display: flex; align-items: center; margin-bottom: 0.5rem;">
+                                <i class="fas fa-star" style="color: var(--secondary); margin-right: 0.5rem;"></i>
+                                Industry specialization
+                            </div>
+                            <div style="display: flex; align-items: center; margin-bottom: 0.5rem;">
+                                <i class="fas fa-star" style="color: var(--secondary); margin-right: 0.5rem;"></i>
+                                Development capabilities
+                            </div>
+                            <div style="display: flex; align-items: center; margin-bottom: 0.5rem;">
+                                <i class="fas fa-star" style="color: var(--secondary); margin-right: 0.5rem;"></i>
+                                Implementation experience
+                            </div>
+                            <div style="display: flex; align-items: center;">
+                                <i class="fas fa-star" style="color: var(--secondary); margin-right: 0.5rem;"></i>
+                                Customer success focus
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button class="btn btn-primary" style="width: 100%;">
+                        Apply Now <i class="fas fa-arrow-right" style="margin-left: 0.5rem;"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="section-header" style="color: white;">
+                <h2>Become a Partner</h2>
+                <p>Join our growing ecosystem of partners and unlock new opportunities for your business</p>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem;">
+                    <button class="btn btn-secondary btn-large">
+                        Partner Application
+                    </button>
+                    <button class="btn btn-outline-white btn-large">
+                        Partner Portal
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-chart-line"></i>
+                        <span>FinTechPro</span>
+                    </div>
+                    <p>Empowering businesses with cutting-edge financial technology solutions for the digital age.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Solutions</h4>
+                    <ul>
+                        <li><a href="solutions.html">Payment Processing</a></li>
+                        <li><a href="solutions.html">Analytics Dashboard</a></li>
+                        <li><a href="solutions.html">Risk Management</a></li>
+                        <li><a href="solutions.html">Mobile Banking</a></li>
+                        <li><a href="solutions.html">Digital Wallet</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">API Reference</a></li>
+                        <li><a href="#">Security</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2024 FinTechPro. All rights reserved. | Powered by advanced financial technology solutions.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modals (same as other pages) -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Welcome Back</h2>
+                <span class="close" onclick="closeModal('loginModal')">&times;</span>
+            </div>
+            <form class="modal-form">
+                <div class="form-group">
+                    <label for="loginEmail">Email</label>
+                    <input type="email" id="loginEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Password</label>
+                    <input type="password" id="loginPassword" required>
+                </div>
+                <div class="form-options">
+                    <label class="checkbox-label">
+                        <input type="checkbox"> Remember me
+                    </label>
+                    <a href="#" class="forgot-password">Forgot password?</a>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full">Sign In</button>
+                <p class="modal-switch">Don't have an account? <a href="#" onclick="switchModal('loginModal', 'signupModal')">Sign up</a></p>
+            </form>
+        </div>
+    </div>
+
+    <div id="signupModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Create Account</h2>
+                <span class="close" onclick="closeModal('signupModal')">&times;</span>
+            </div>
+            <form class="modal-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="signupFirstName">First Name</label>
+                        <input type="text" id="signupFirstName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signupLastName">Last Name</label>
+                        <input type="text" id="signupLastName" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="signupEmail">Email</label>
+                    <input type="email" id="signupEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="signupPassword">Password</label>
+                    <input type="password" id="signupPassword" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" id="confirmPassword" required>
+                </div>
+                <div class="form-options">
+                    <label class="checkbox-label">
+                        <input type="checkbox" required> I agree to the Terms of Service and Privacy Policy
+                    </label>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full">Create Account</button>
+                <p class="modal-switch">Already have an account? <a href="#" onclick="switchModal('signupModal', 'loginModal')">Sign in</a></p>
+            </form>
+        </div>
+    </div>
+
+    <div id="joinModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Join Our Team</h2>
+                <span class="close" onclick="closeModal('joinModal')">&times;</span>
+            </div>
+            <form class="modal-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="joinFirstName">First Name</label>
+                        <input type="text" id="joinFirstName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="joinLastName">Last Name</label>
+                        <input type="text" id="joinLastName" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="joinEmail">Email</label>
+                    <input type="email" id="joinEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="position">Position of Interest</label>
+                    <select id="position" required>
+                        <option value="">Select a position</option>
+                        <option value="Software Engineer">Software Engineer</option>
+                        <option value="Product Manager">Product Manager</option>
+                        <option value="Data Scientist">Data Scientist</option>
+                        <option value="UX/UI Designer">UX/UI Designer</option>
+                        <option value="Sales Executive">Sales Executive</option>
+                        <option value="Marketing Specialist">Marketing Specialist</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="experience">Years of Experience</label>
+                    <select id="experience" required>
+                        <option value="">Select experience level</option>
+                        <option value="0-1 years">0-1 years</option>
+                        <option value="2-3 years">2-3 years</option>
+                        <option value="4-5 years">4-5 years</option>
+                        <option value="6-10 years">6-10 years</option>
+                        <option value="10+ years">10+ years</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="coverLetter">Cover Letter</label>
+                    <textarea id="coverLetter" rows="4" placeholder="Tell us why you want to join our team..." required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="resume">Resume</label>
+                    <div class="file-upload">
+                        <input type="file" id="resume" accept=".pdf,.doc,.docx">
+                        <label for="resume" class="file-upload-label">
+                            <i class="fas fa-cloud-upload-alt"></i>
+                            Click to upload or drag and drop
+                        </label>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-secondary btn-full">
+                    <i class="fas fa-paper-plane"></i> Submit Application
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/main.js"></script>
+    <script>
+        // Partner data
+        const partnerData = {
+            technology: {
+                title: 'Technology Partners',
+                partners: [
+                    {
+                        name: 'Microsoft',
+                        logo: '🏢',
+                        type: 'Cloud Infrastructure',
+                        description: 'Azure cloud services and enterprise solutions integration',
+                        benefits: ['Scalable cloud infrastructure', 'Enterprise security', 'AI/ML capabilities'],
+                        partnerSince: '2019'
+                    },
+                    {
+                        name: 'Amazon Web Services',
+                        logo: '☁️',
+                        type: 'Cloud Platform',
+                        description: 'AWS cloud computing and financial services',
+                        benefits: ['Global infrastructure', 'Compliance certifications', 'Financial data processing'],
+                        partnerSince: '2018'
+                    },
+                    {
+                        name: 'Google Cloud',
+                        logo: '🔍',
+                        type: 'AI & Analytics',
+                        description: 'Machine learning and data analytics platform',
+                        benefits: ['Advanced AI/ML', 'BigQuery analytics', 'Real-time processing'],
+                        partnerSince: '2020'
+                    },
+                    {
+                        name: 'Salesforce',
+                        logo: '⚡',
+                        type: 'CRM Integration',
+                        description: 'Customer relationship management and sales automation',
+                        benefits: ['360° customer view', 'Sales automation', 'Custom workflows'],
+                        partnerSince: '2019'
+                    }
+                ]
+            },
+            financial: {
+                title: 'Financial Partners',
+                partners: [
+                    {
+                        name: 'JPMorgan Chase',
+                        logo: '🏦',
+                        type: 'Investment Banking',
+                        description: 'Corporate banking and investment services partnership',
+                        benefits: ['Corporate banking solutions', 'Investment services', 'Risk management'],
+                        partnerSince: '2020'
+                    },
+                    {
+                        name: 'Goldman Sachs',
+                        logo: '💼',
+                        type: 'Investment Services',
+                        description: 'Wealth management and investment banking solutions',
+                        benefits: ['Wealth management', 'Trading platforms', 'Research insights'],
+                        partnerSince: '2021'
+                    },
+                    {
+                        name: 'Visa',
+                        logo: '💳',
+                        type: 'Payment Networks',
+                        description: 'Global payment processing and card services',
+                        benefits: ['Global payment acceptance', 'Fraud protection', 'Real-time processing'],
+                        partnerSince: '2018'
+                    },
+                    {
+                        name: 'Mastercard',
+                        logo: '🔄',
+                        type: 'Payment Solutions',
+                        description: 'Digital payment solutions and cybersecurity',
+                        benefits: ['Digital payment solutions', 'Cybersecurity', 'Data analytics'],
+                        partnerSince: '2019'
+                    }
+                ]
+            },
+            regulatory: {
+                title: 'Regulatory Partners',
+                partners: [
+                    {
+                        name: 'Thomson Reuters',
+                        logo: '📊',
+                        type: 'Regulatory Intelligence',
+                        description: 'Compliance and regulatory intelligence solutions',
+                        benefits: ['Regulatory updates', 'Compliance automation', 'Risk intelligence'],
+                        partnerSince: '2020'
+                    },
+                    {
+                        name: 'SWIFT',
+                        logo: '🌐',
+                        type: 'Financial Messaging',
+                        description: 'Secure financial messaging and standards',
+                        benefits: ['Secure messaging', 'Global standards', 'Cross-border payments'],
+                        partnerSince: '2019'
+                    },
+                    {
+                        name: 'KPMG',
+                        logo: '🔍',
+                        type: 'Audit & Advisory',
+                        description: 'Audit, tax, and advisory services',
+                        benefits: ['Compliance auditing', 'Risk assessment', 'Regulatory consulting'],
+                        partnerSince: '2021'
+                    },
+                    {
+                        name: 'Deloitte',
+                        logo: '💡',
+                        type: 'Consulting',
+                        description: 'Financial services consulting and technology',
+                        benefits: ['Strategic consulting', 'Digital transformation', 'Risk management'],
+                        partnerSince: '2020'
+                    }
+                ]
+            }
+        };
+
+        function showPartnerCategory(category) {
+            const data = partnerData[category];
+            
+            // Update title
+            document.querySelector('#partnerDetails h3').textContent = data.title;
+            
+            // Update partner grid
+            const partnerGrid = document.getElementById('partnerGrid');
+            partnerGrid.innerHTML = data.partners.map(partner => `
+                <div class="solution-card">
+                    <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+                        <div style="font-size: 2.5rem; margin-right: 1rem;">${partner.logo}</div>
+                        <div>
+                            <h4 style="margin: 0;">${partner.name}</h4>
+                            <p style="color: var(--primary); font-weight: 600; margin: 0; font-size: 0.875rem;">${partner.type}</p>
+                        </div>
+                    </div>
+                    <p style="color: var(--text-light); margin-bottom: 1rem;">${partner.description}</p>
+                    
+                    <div style="margin-bottom: 1rem;">
+                        <h5 style="font-weight: 600; margin-bottom: 0.5rem;">Key Benefits:</h5>
+                        <div style="font-size: 0.875rem;">
+                            ${partner.benefits.map(benefit => `
+                                <div style="display: flex; align-items: center; margin-bottom: 0.5rem;">
+                                    <i class="fas fa-check-circle" style="color: var(--accent); margin-right: 0.5rem; font-size: 1rem;"></i>
+                                    ${benefit}
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                    
+                    <div style="display: flex; justify-content: space-between; align-items: center; padding-top: 1rem; border-top: 1px solid var(--gray-200);">
+                        <span style="font-size: 0.875rem; color: var(--text-light);">Partner since ${partner.partnerSince}</span>
+                        <span style="background: var(--gray-100); padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.75rem; border: 1px solid var(--gray-200);">Active</span>
+                    </div>
+                </div>
+            `).join('');
+            
+            // Update category button styles
+            const categoryCards = document.querySelectorAll('.solution-card[onclick*="showPartnerCategory"]');
+            categoryCards.forEach(card => {
+                card.style.border = '1px solid transparent';
+            });
+            
+            // Highlight selected category
+            const selectedCard = document.querySelector(`[onclick="showPartnerCategory('${category}')"]`);
+            if (selectedCard) {
+                selectedCard.style.border = '2px solid var(--primary)';
+            }
+        }
+
+        // Initialize with technology partners
+        document.addEventListener('DOMContentLoaded', function() {
+            showPartnerCategory('technology');
+        });
+    </script>
+</body>
+</html>
